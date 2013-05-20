@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Simple HTML5 tabs by @toddmotto | toddmotto.com</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="author" content="@toddmotto">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/demo.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<a href="http://toddmotto.com" target="_blank">
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Logo" class="logo-img">
+				</a>
+			</div>
+			<ul class="demo-nav">
+				<li class="demo-nav-link">
+					<a href="http://toddmotto.com/simple-html5-data-attribute-jquery-tabs-markup-free-and-relative-to-their-container-for-ultimate-reuse">Go to tutorial</a>
+				</li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<div class="main">
+			
+				<p class="main-desc">
+					Simple HTML5 data-* jQuery tabs. Markup free and relative to their container for ultimate re-use.
+				</p>
+			
+				<!-- tabs -->
+				<div class="tabs">
+					<a href="#" data-tab="1" class="tab active">Tab 1</a>
+					<a href="#" data-tab="2" class="tab">Tab 2</a>
+					<a href="#" data-tab="3" class="tab">Tab 3</a>
+					<a href="#" data-tab="4" class="tab">Tab 4</a>
+					<a href="#" data-tab="5" class="tab">Tab 5</a>
+					
+					<div data-content="1" class="content active">Tab 1 Content</div>
+					<div data-content="2" class="content">Tab 2 Content</div>
+					<div data-content="3" class="content">Tab 3 Content</div>
+					<div data-content="4" class="content">Tab 4 Content</div>
+					<div data-content="5" class="content">Tab 5 Content</div>
+				</div>
+				<!-- /tabs -->
+				
+				<!-- tabs -->
+				<div class="tabs">
+					<a href="#" data-tab="1" class="tab">Tab 1</a>
+					<a href="#" data-tab="2" class="tab">Tab 2</a>
+					<a href="#" data-tab="3" class="tab">Tab 3</a>
+					<a href="#" data-tab="4" class="tab active">Tab 4</a>
+					<a href="#" data-tab="5" class="tab">Tab 5</a>
+					
+					<div data-content="1" class="content">Tab 1 Content</div>
+					<div data-content="2" class="content">Tab 2 Content</div>
+					<div data-content="3" class="content">Tab 3 Content</div>
+					<div data-content="4" class="content active">Tab 4 Content</div>
+					<div data-content="5" class="content">Tab 5 Content</div>
+				</div>
+				<!-- /tabs -->
+			
+			</div>
+		</div>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script>
+		$(function () {
+		
+			$('[data-tab]').on('click', function (e) {
+				$(this).addClass('active').siblings('[data-tab]').removeClass('active')
+				$(this).siblings('[data-content=' + $(this).data('tab') + ']').addClass('active').siblings('[data-content]').removeClass('active')
+				e.preventDefault()
+			})
+			
+		})
+		</script>
+	
+		<!-- Demo Analytics -->
+		<script>
+			var _gaq=[['_setAccount','UA-20440416-10'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src='//www.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)})(document,'script');
+		</script>
+		
+		<!-- Demo Ads -->
+		<script src="http://toddmotto.com/ads/ads.js"></script>
+
+	</body>
+</html>
